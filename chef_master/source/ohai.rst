@@ -9,6 +9,7 @@ Automatic Attributes
 .. include:: ../../includes_ohai/includes_ohai_automatic_attribute.rst
 
 **Get a list of automatic attributes for a node**
+
 .. include:: ../../includes_ohai/includes_ohai_attribute_list.rst
 
 .. note:: Attributes can be configured in cookbooks (attribute files and recipes), roles, and environments. In addition, |ohai| collects attribute data about each node at the start of the |chef| run. See the `overview of attributes <http://docs.opscode.com/chef_overview_attributes.html>`_ for more information about how all of these attributes fit together.
@@ -87,7 +88,7 @@ The builtin plugins that come with |ohai| use the following trick to load platfo
    provides "languages/lolcode"
    require_plugin "languages"
    require_plugin "#{os}::lolcode"
-   
+
    languages[:lolcode] = Mash.new unless languages[:lolcode]
    languages[:lolcode][:version] = "TEH VERSHIONS"
 
